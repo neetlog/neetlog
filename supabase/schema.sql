@@ -32,7 +32,7 @@ create table if not exists public.tasks (
 create table if not exists public.study_sessions (
   id uuid primary key default gen_random_uuid(),
   user_id uuid not null references auth.users(id) on delete cascade,
-  duration_minutes integer not null check (duration_minutes between 1 and 1440),
+  duration_seconds bigint not null check (duration_seconds > 0),
   started_at timestamptz not null,
   completed_at timestamptz,
   study_date date not null,

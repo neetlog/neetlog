@@ -13,13 +13,15 @@ A responsive personal NEET study tracker. Built with React, Vite and Supabase Au
 
 New accounts must confirm their email before first login when email confirmation is enabled. Password reset links return to the configured Site URL.
 
+For an existing deployment, run [`supabase/migrations/20260925_study_session_stopwatch.sql`](supabase/migrations/20260925_study_session_stopwatch.sql) in the Supabase SQL Editor before deploying the updated frontend. It converts prior minute-based sessions to exact seconds and preserves their totals. Fresh projects should use the current `supabase/schema.sql` instead.
+
 ## Features
 
 - Private email/password accounts, persistent Supabase sessions, email confirmation and password reset.
 - Individual profile and target year.
 - Personal chapter status and progress for all six subjects; tracked progress is saved per account.
 - Task creation, editing, completion, deletion, subject/chapter association, and due-date views.
-- 25-minute focus timer; a completed session is saved to the account's study history.
+- Unlimited stopwatch with start, pause, resume and Finish Study; exact elapsed seconds are saved to the account's study history.
 - Dashboard and progress summary computed from recorded data, including weekly time and streaks.
 - Responsive sidebar and mobile navigation.
 
