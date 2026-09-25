@@ -1,0 +1,26 @@
+# Dependencies and generated output
+node_modules/
+dist/
+.pnpm-store/
+
+# Environment files: only commit the documented template
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Private keys, signing certificates, and credential exports
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.secret
+*.secrets
+id_rsa*
+id_ed25519*
+credentials.json
+service-account*.json
+secrets/
+.secrets/
